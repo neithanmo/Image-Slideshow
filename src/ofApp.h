@@ -10,8 +10,8 @@ class ofApp : public ofBaseApp{
                 void draw();
                 ofDirectory dir;
 		ofDirectory shaderDir;
-                int numberImages;
-                int from,
+                int numberImages,
+                    from,
 		    y,
 		    time1,
 		    to,
