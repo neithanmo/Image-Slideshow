@@ -9,13 +9,17 @@ class ofApp : public ofBaseApp{
                 void update();
                 void draw();
                 ofDirectory dir;
-                int n;
-                int n1;
-                int x,y,time1,x2;
-        float progress;
-        ofTexture img;
-        ofTexture img2;
-                ofShader shader;
+		ofDirectory shaderDir;
+                int numberImages;
+                int from,
+		    y,
+		    time1,
+		    to,
+		    shaderIndex,
+		    numberShaders;
+        	float progress;
+        	ofShader shader;
                 ofFbo fbo;
-        vector<ofTexture> seq;
+        	vector<ofTexture> seq;
+		vector<string> shaderList;
 };
