@@ -2,6 +2,7 @@
 // #### setup ########
 
 #define FRAGMENT_DIR "/home/pi/openframeworks0-10-armv6/apps/myApps/rpiSlideshow/bin/data/fragShaders"
+#define IMAGES_DIR "/home/pi/imgs"
 
 void ofApp::setup(){
     ofSetFrameRate(30);
@@ -10,7 +11,7 @@ void ofApp::setup(){
     from  = -1;
     shaderIndex = 0;
     ofEnableAlphaBlending();
-    numberImages = dir.listDir("/home/pi/imgs");
+    numberImages = dir.listDir(IMAGES_DIR);
     seq.resize( numberImages );
  
     //4. Load images
@@ -38,7 +39,7 @@ void ofApp::setup(){
 //###update part ######
  
 void ofApp::update(){
-    int n1 = dir.listDir("/home/pi/imgs");
+    int n1 = dir.listDir(IMAGES_DIR);
     if( numberImages != n1 ){
         seq.resize( n1 );
 	numberImages = n1;
