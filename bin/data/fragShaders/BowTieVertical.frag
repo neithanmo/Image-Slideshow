@@ -1,3 +1,6 @@
+// Author: huynx
+// License: MIT
+
 #ifdef GL_ES
  precision highp float;
 #endif
