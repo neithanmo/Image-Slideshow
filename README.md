@@ -16,26 +16,26 @@ cd ~/of_v0.10.0_linuxarmv6l_release/scripts/linux/debian
 ./install_dependencies.sh   
 ```
 The `install_dependencies.sh` script will take a while for downloading and installing all necessary dependencies.
-after the dependencies installation is time to  compile Openframeworks, but first, is necessary have enough memory. check your raspi-config and assign only 64MB for graphics memory, this value is the default. Whit this the system will have enough ram memory for compiling.
+after the dependencies installation is time to  compile Openframeworks, but first, is necessary have enough memory. check your raspi-config and assign only 64MB for graphics memory, this value is the default, so, the system will have enough ram memory for compiling.
 ```
 cd ~/of_v0.10.0_linuxarmv6l_release/scripts/linux
 ./compileOF.sh   
 ```
 The `compileOF.sh` script will take a lot of time compiling openframeworks.
-If something wrong occured during the installation refer to openframeworks forum for answers or send me a email.Now we need to compile the RPI-Slideshow source for that:
+If something wrong occured during the installation refer to openframeworks forum for answers or send me a email.Now we need to compile the RPI-Slideshow source, for that:
 ```
 cd ~/of_v0.10.0_linuxarmv6l_release/apps/myApps
 git clone https://github.com/neithanmo/Image-Slideshow.git
 cd Image-Slideshow/
 make 
 ```
-This will compile the source code of RPI-Slideshow, some important element to consider before running the RPI-Slideshow is about the path to the images directory and fragment shaders directory, change it according to the path in your system
+This will compile the source code of RPI-Slideshow, some important element to consider before running the RPI-Slideshow is about the path to the images directory and fragment shaders directory, change it in the `ofApp.cpp` file inside the `src/` directory, according to the path in your system 
 
 ```
 #define FRAGMENT_DIR "PATH_TO/openframeworks0-10-armv6/apps/myApps/Image-Slideshow/bin/data/fragShaders"
 #define IMAGES_DIR "PATH_TO/imgs"
 ```
-The fragment shaders directory is located inside the proyect directory, under the bin subdirectory and inside of fragShaders directory. then we are ready for running the RPI-Slideshow binary, this binary is located inside the bin subdirectory, but before that we need to change the system configuration specyficly the memory assigned for graphics, in the compilation steps the graphics memory was reduced to 64MB, now it should be changed to 512MB. for that, run the `sudo raspi-config` command and adjust his value in the advanced options. after that reboot the system and run the Image-Slideshow
+The fragment shaders are located inside the proyect directory, under the `bin/data` subdirectory and inside of `fragShaders/` directory. then we are ready for running the RPI-Slideshow binary, this binary is located inside the bin subdirectory, but before that we need to change the system configuration specifically the memory assigned for graphics, in the compilation steps the graphics memory was reduced to 64MB, now it should be changed to 512MB. for that, run the `sudo raspi-config` command and adjust his value in the advanced options. after that reboot the system and run the Image-Slideshow
 
 ```
 cd ~/of_v0.10.0_linuxarmv6l_release/apps/myApps/Image-Slideshow
