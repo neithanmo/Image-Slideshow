@@ -1,8 +1,8 @@
 # RPI-Slideshow
 The RPI-Slideshow is a simple image slideshow for the Raspberry Pi2 B++ or superior. 
 
-This slideshow uses shaders for the effects used in the images transitions, not computational cost because it is entirely based on accelerated graphics in the Raspberry Pi GPU. The transitions are based on fragment shaders which are programmmed using the OpenGL shading Lenguage(GLSL), about how write your own transition you can look [here](https://thebookofshaders.com/) and others interactive resources are [gl-transitions](https://gl-transitions.com/), [sandbox](http://glslsandbox.com/).
- The shader transitions used in this proyect were take from the The Open Collection of [GLTransitions](https://gl-transitions.com/gallery).
+The RPI-Slideshow uses shaders for the effects used in the images transitions, not computational cost because it is entirely based on accelerated graphics in the Raspberry Pi GPU. The transitions are based on fragment shaders which are programmmed using the OpenGL shading Lenguage(GLSL), about how write your own transition you can look [here](https://thebookofshaders.com/) and others interactive resources are [gl-transitions](https://gl-transitions.com/), [sandbox](http://glslsandbox.com/).
+ The shader transitions used in this proyect were taken from the The Open Collection of [GLTransitions](https://gl-transitions.com/gallery).
  
  ## Building Instructions
  RPI-Slideshow uses [Openframeworks](https://openframeworks.cc/) version 0.10.0, the most recent. Go to the [Download](https://openframeworks.cc/download/) and choose the proper ARM version for your Raspberry Pi, currently only support for *armv6* and *armv7*, but the *armv7* should work for the latest Raspberry Pi. Download and unzip openframeworks in your  Raspberry Pi  with:
